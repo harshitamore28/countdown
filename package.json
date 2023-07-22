@@ -2,7 +2,7 @@
   "name": "mail_timer",
   "version": "1.0.0",
   "description": "Countdown Timer in emails",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon server.js"
