@@ -83,11 +83,10 @@ function startGIF(cb){
     }
      encoder.finish();
 }
+app.get("/", (req, res) => {
 startGIF(()=>{
-  console.log("finished");
-  app.get("/", (req, res) => {
-        res.sendFile("output/result1.gif", { root: __dirname });
-        console.log("In callback");
-    });
+    res.sendFile("output/result1.gif", { root: __dirname });
+    console.log("In callback");
+})
 });
 
