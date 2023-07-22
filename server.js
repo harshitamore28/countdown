@@ -15,7 +15,7 @@ const Canvas = require('canvas');
 const moment = require('moment');
 
 function startGIF(cb){
-  const time = "2023-07-22T23:30";
+  const time = "2023-07-22T22:45";
   const name = "mytimer";
   const width = 100;
   const height = 50;
