@@ -15,7 +15,7 @@ const Canvas = require('canvas');
 const moment = require('moment');
 
 function startGIF(cb){
-  const time = "2023-07-22T22:45";
+  const time = "2023-07-22T23:59";
   const name = "mytimer";
   const width = 100;
   const height = 50;
@@ -83,10 +83,11 @@ function startGIF(cb){
     }
      encoder.finish();
 }
-app.get("/", (req, res) => {
-// startGIF(()=>{
-    res.sendFile("output/result1.gif", { root: __dirname });
-    console.log("In callback");
-// })
+startGIF(()=>{
+  console.log("finished");
+  app.get("/", (req, res) => {
+        res.sendFile("output/result1.gif", { root: __dirname });
+        console.log("In callback");
+    });
 });
 
