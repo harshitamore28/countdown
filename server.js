@@ -4,7 +4,7 @@ var port = process.env.PORT || 4000;
 
 app.listen(port,()=>{
     console.log(
-      "Server started on port:" + port + ". Click on http://localhost:"+port+"/result1.gif"
+      "Server started on port:" + port + ". Click on http://localhost:"+port
     );
 })
 
@@ -83,7 +83,7 @@ function startGIF(cb){
     }
      encoder.finish();
 }
-app.get("/result1.gif", (req, res) => {
+app.get("/", (req, res) => {
 startGIF(()=>{
     res.sendFile("output/result1.gif", { root: __dirname });
     console.log("In callback");
